@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="vue_Picture_switching:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>false</exploded>
+        <module>vue_Picture_switching</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="archive" name="vue_Picture_switching-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="vue_Picture_switching:war exploded" />
+    </root>
+  </artifact>
+</component>
