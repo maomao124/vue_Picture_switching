@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：vue_Picture_switching
+  File name(文件名): test2
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/13
+  Time(创建时间)： 20:46
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="hover.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <div class="img_position">
+        <img class="img animated bounceInDown" :src="'photos1/'+imgArr[index]" :alt="imgArr[index]"/>
+    </div>
+
+    <div class="prev_position">
+        <div class="animated bounceInUp">
+            <div class="prev hvr-wobble-vertical" v-show="index>0" @click="img_prev">上<br>一<br>张</div>
+        </div>
+    </div>
+
+
+    <div class="next_position">
+        <div class="animated bounceInUp">
+            <div class="next hvr-wobble-vertical" v-show="index<imgArr.length-1" @click="img_next">下<br>一<br>张</div>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            index: 3,
+            imgArr: [
+                "5aff90f0bec88.jpg",
+                "5aff90f3c1565.png",
+                "5aff90f52f938.png",
+                "5aff90f65fcc5.jpg",
+                "5aff90f864c80.jpg",
+                "5aff90f974df9.jpg",
+                "5aff90f742289.jpg",
+                "5aff90fa715ca.jpg",
+                "5aff90fb61a2d.jpg",
+                "5aff90fd88788.jpg",
+                "5affb75a846e4.jpg",
+                "5affb75d19b16.jpg",
+                "5affb75f0c26a.jpg",
+                "5affb75fea7d3.jpg",
+                "5affb759790c3.jpg",
+                "5b0b5d4a8a382.jpg",
+                "5b0b5d4ba9c32.jpg",
+                "5b0b5d4cd109d.jpg",
+                "5b0b5d4e1ac6c.jpg",
+                "5b0cf10aa1bc4.jpg",
+                "5b0cf10c91c76.jpg",
+                "5b0cf10d9e741.jpg",
+                "5b0cf10ec3823.jpg",
+                "5b0cf103e7f05.jpg",
+                "5b0cf104ef531.jpg",
+                "5b0fafaea804f.jpg",
+                "5b0fafb4b334e.jpg",
+                "5b0fafb11a03d.jpg",
+                "5b0fafb39e696.jpg",
+                "5b0fafb71a9a2.jpg",
+                "5b0fafb929d12.jpg",
+                "5b0fafb299102.jpg",
+                "5b0fafba40143.jpg",
+                "5b0fafbb57c7d.jpg",
+                "5b03acb8a168f.jpg",
+                "5b03acbb1dfb0.jpg",
+                "5b03acbc13782.jpg",
+                "5b03acbd2ea4a.jpg",
+                "5b03acbe5458c.jpg",
+                "5b03acbf22dc6.jpg",
+                "5b08f642c7559.jpg",
+                "5b08f643d658b.jpg",
+                "5b08f645ca6de.jpg",
+                "5b08f648d05ad.jpg",
+                "5b10e08a3288b.jpg",
+                "5b10e08b2bead.jpg",
+                "5b10e0870f58d.jpg",
+                "5b10e08822d1c.jpg",
+                "5b10e08928c1e.jpg",
+                "5b10e086264e3.jpg",
+                "5b10e08467871.jpg",
+                "5b028ce3c3b4b.jpg",
+                "5b028ce848cf7.jpg",
+                "5b028ce6405b8.jpg",
+                "5b028ce54563c.jpg",
+                "5b028ce748948.jpg",
+                "5b052fd72d507.jpg",
+                "5b052fd916ab8.jpg",
+                "5b052fdb2db16.jpg",
+                "5b052fde22e51.jpg",
+                "5b052fe02f2a5.jpg",
+            ],
+            //current_img: this.imgArr[this.index],
+        }
+        ,
+        methods: {
+            img_prev: function ()
+            {
+                //console.log("prev")
+                this.index--
+                console.log(this.index)
+            }
+            ,
+            img_next: function ()
+            {
+                //console.log("next")
+                this.index++;
+                console.log(this.index)
+            }
+            ,
+        }
+    })
+</script>
+</body>
+</html>

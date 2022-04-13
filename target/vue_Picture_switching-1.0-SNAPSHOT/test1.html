@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：vue_Picture_switching
+  File name(文件名): test1
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/13
+  Time(创建时间)： 18:50
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="hover.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <div class="img_position">
+        <img class="img animated bounceInDown" :src="'photos/'+imgArr[index]" :alt="imgArr[index]"/>
+    </div>
+
+    <div class="prev_position">
+        <div class="animated bounceInUp">
+            <div class="prev hvr-wobble-vertical" v-show="index>0" @click="img_prev">上<br>一<br>张</div>
+        </div>
+    </div>
+
+
+    <div class="next_position">
+        <div class="animated bounceInUp">
+            <div class="next hvr-wobble-vertical" v-show="index<imgArr.length-1" @click="img_next">下<br>一<br>张</div>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            index: 2,
+            imgArr: [
+                "p1.png",
+                "p2.png",
+                "p3.png",
+                "p4.png",
+                "p5.png",
+                "p6.png",
+                "p7.png",
+                "p8.png",
+                "p9.png",
+                "p10.png",
+                "p11.png",
+                "p12.png",
+                "p13.png",
+                "p14.png",
+                "p15.png",
+                "p16.png",
+                "p17.png",
+                "p19.png",
+                "p20.png",
+                "p21.png",
+                "p22.png",
+                "p23.png",
+                "p24.png",
+                "p25.png",
+                "p26.png",
+                "p27.png",
+                "p28.png",
+                "p29.png",
+                "p30.png",
+                "p31.png",
+                "p32.png",
+                "p33.png",
+                "p34.png",
+                "p35.png",
+                "p36.png"
+            ],
+            //current_img: this.imgArr[this.index],
+        }
+        ,
+        methods: {
+            img_prev: function ()
+            {
+                //console.log("prev")
+                this.index--
+                console.log(this.index)
+            }
+            ,
+            img_next: function ()
+            {
+                //console.log("next")
+                this.index++;
+                console.log(this.index)
+            }
+            ,
+        }
+    })
+</script>
+
+</body>
+</html>

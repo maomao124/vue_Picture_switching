@@ -1,0 +1,76 @@
+/*
+  Project name(项目名称)：vue_Picture_switching 
+  File name(文件名): style
+  Author(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/13 
+  Time(创建时间)： 18:54
+  Version(版本): 1.0
+  Description(描述)： 无
+ */
+
+
+body {
+    background-color: lightskyblue;
+}
+
+.prev_position {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+}
+
+.next_position {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0%, -50%);
+}
+
+.img_position{
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+}
+
+.prev {
+    width: 3vw;
+    height: 60vh;
+    border: 4px dotted lightpink;
+    text-align: center;
+    line-height: 20vh;
+    font-size: 2vw;
+    color: #f5a3ff;
+    background-color: #fff99c;
+    border-bottom-right-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+    transition: all 2s linear 0s;
+    user-select: none;
+}
+
+.next {
+    width: 3vw;
+    height: 60vh;
+    border: 4px dotted lightpink;
+    text-align: center;
+    line-height: 20vh;
+    font-size: 2vw;
+    color: #f5a3ff;
+    background-color: #fff99c;
+    border-bottom-left-radius: 1.5em;
+    border-top-left-radius: 1.5em;
+    transition: all 2s linear 0s;
+    user-select: none;
+}
+
+.img {
+    width: 90vw;
+    height: 96vh;
+    transition: all 2s linear 0s;
+    border: 6px dotted lightpink;
+    border-radius: 2em;
+    user-select: none;
+}
